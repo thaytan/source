@@ -174,7 +174,7 @@ Defining the changes in each build. *Note that if a number is missing, that buil
 *Apr 26, 2018*
 
 * Added slew of packages to Onion repo
-	* `nodogsplash` captive portal + `kmod-ipt-ipopt`
+	* `nodogsplash` captive portal + `kmod-ipt-ipopt` *added new routing repo*
 	* `kmod-pps` + `kmod-pps-gpio`
 	* `bind` server, tools, and lib
 	* `etherwake`

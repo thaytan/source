@@ -10,6 +10,7 @@ cat /etc/opkg/distfeeds.conf | sed \
 echo "src/gz omega2_core http://repo.onion.io/omega2/packages/core
 src/gz omega2_base http://repo.onion.io/omega2/packages/base
 src/gz omega2_packages http://repo.onion.io/omega2/packages/packages
+src/gz omega2_routing http://repo.onion.io/omega2/packages/routing
 src/gz omega2_onion http://repo.onion.io/omega2/packages/onion" \
 >> /etc/opkg/distfeeds.conf.new
 
