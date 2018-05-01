@@ -170,6 +170,11 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b186
+*Apr 30, 2018*
+
+* Added `asterix15` and `baresip` packages to repo
+
 #### b185
 *Apr 26, 2018*
 
