@@ -170,6 +170,13 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b187
+*June 4, 2018*
+
+* Added Onion command line utility (first iteration - only configures ethernet port for now) 
+* Warp Core Update - Added network testing tool
+* Added kernel modules to Onion package repo: `kmod-pps-ldisc`, `kmod-usb-net-rndis`, `kmod-usb-net-cdc-ether`
+
 #### b186
 *Apr 30, 2018*
 
