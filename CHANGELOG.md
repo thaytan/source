@@ -170,6 +170,18 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b188
+*June 12, 2018*
+
+* New I2C Expansion Drivers Version
+	* Added `omegaMotors` Python module to `pyPwmExp`
+	* Updates to i2c library functions:
+		* upped buffer size to 256 bytes
+		* fixed issue where buffer copy actually copies an extra byte
+		* fixed readRaw function - correctly clearing buffer
+* Update hostname tool new version
+	* Now sets wwan hostname so Omega gets recognized by name in router client lists
+
 #### b187
 *June 4, 2018*
 
