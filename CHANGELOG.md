@@ -170,6 +170,12 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b189
+*July 3, 2018* 
+
+* Upped omega2-ctrl package version to reflect code changes a while ago
+* New version of OnionOS released, as well as a new Camera app
+
 #### b188
 *June 12, 2018*
 
