@@ -170,6 +170,12 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b192
+*July 12, 2018*
+
+* Added telnet and telnetd to busybox
+* Updated `python-adc-exp` package
+
 #### b191
 *July 11, 2018*
 
