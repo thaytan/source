@@ -170,6 +170,11 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b193
+*July 31, 2018*
+
+* Updated OnionOS and Added Sensor Monitor App
+
 #### b192
 *July 12, 2018*
 
