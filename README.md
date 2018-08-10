@@ -6,9 +6,12 @@ This buildsystem for the LEDE Linux distribution has been modified by Onion Corp
 
 ## Notes
 
-* Due to incompatibilities with recent kernel updates, building a firmware with the `Ralink APSoC WiFi SoftAP driver` **will cause a kernel panic during boot**
-	* This can be fixed by reflashing the Omega's firmware using the Omega's Bootloader and Ethernet Expansion
-	* We are working on a new implementation of the WiFi driver, will be arriving in Q3 2017! Stay tuned!
+* ~~Due to incompatibilities with recent kernel updates, building a firmware with the `Ralink APSoC WiFi SoftAP driver` **will cause a kernel panic during boot**~~
+	* ~~This can be fixed by reflashing the Omega's firmware using the Omega's Bootloader and Ethernet Expansion~~
+	* ~~We are working on a new implementation of the WiFi driver, stay tuned!~~
+	* Fixed with release of Onion WiFi Warp Core driver
+		* Available as an [OpenWRT/LEDE package](https://github.com/OnionIoT/OpenWRT-Packages/tree/master/wifi-warp-core) for systems running Linux Kernel 4.4.76
+		* **See [this post for more details on the Warp Core](https://onion.io/2bt-brand-new-os-release/)**
 
 ## Additional Reading
 
