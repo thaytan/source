@@ -170,6 +170,16 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b194
+*August 1, 2018*
+
+* Added kernel patch to stop the annoying "buggy DT" kernel warning on boot
+* Added I2C kernel patch, now have support for:
+	* ACK/NAK handling - so i2cdetect command works properly now
+	* Clock stretching - compatible with more types of I2C devices
+	* Unlimited message length - previously capped at 64 bytes
+	* Supports repeated start sequence
+
 #### b193
 *July 31, 2018*
 
