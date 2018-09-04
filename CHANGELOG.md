@@ -170,6 +170,12 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b195 
+*August 31, 2018*
+
+* Added support for use of hardware PWM units on GPIO18 and 19
+* Added python3 modules for Onion PWM, OLED, and Relay Expansions
+
 #### b194
 *August 1, 2018*
 

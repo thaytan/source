@@ -196,3 +196,7 @@
 &wmac {
 	status = "okay";
 };
+
+&pwm {
+	status = "okay";
+};
