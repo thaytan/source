@@ -18,6 +18,33 @@ This buildsystem for the LEDE Linux distribution has been modified by Onion Corp
 * See `CHANGELOG.md` for a listing of the changes for each firmware version and build
 * See `DISCLAIMER.md` for Onion's disclaimer regarding this build system
 
+# Using this Build System
+
+This buildsystem can be used to create packages and firmware for the Omega2 device. There are two preferred ways to use the buildsystem:
+
+1. Using the `onion/omega2-source` Docker image **Recommended method**
+2. Running the build system on a Linux system
+
+## Using the Docker Image
+
+The Docker image takes care of all environmental configuration and is the recommended method. For details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
+
+## Using a Linux System
+
+**Not recommended for beginners** 
+
+See the [Dockerfile](https://github.com/OnionIoT/source/blob/lede-17.01/Dockerfile) to get an idea of the system and environment requirements.
+
+To correctly initialize the build system, run the following:
+
+```
+sh scripts/onion-feed-setup.sh
+git checkout .config
+```
+
+This will initialize & configure all the package feeds as well as setup the `.config` file to match this repo. With these commands, the firmware built will match the official firmware released by Onion.
+
+
 # LEDE Linux Distribution
 
 This is the buildsystem for the LEDE Linux distribution.
