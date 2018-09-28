@@ -1,6 +1,8 @@
 # Onion Omega2 Firmware Build System
 
-This buildsystem for the LEDE Linux distribution has been modified by Onion Corporation to build firmware for the Onion Omega2 and Omega2+
+This buildsystem for the LEDE Linux distribution has been modified by Onion Corporation to build firmware for the Onion Omega2 family of devices.
+
+![Omega2](https://github.com/OnionIoT/Onion-Media/raw/master/Product%20Photos/Omega2/OM2-2.jpg)
 
 **Onion Corporation is not responsible for any damage to your device caused by using custom firmware or packages not built and released by Onion Corporation.**
 
@@ -47,7 +49,7 @@ make
 
 > **We recommend running Docker on a Linux system**. Some users have reported compilation issues when running Docker on Windows and Mac OS.
 
-For full details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
+For more details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
 
 ## Using a Linux System
 
