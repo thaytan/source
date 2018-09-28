@@ -27,23 +27,107 @@ This buildsystem can be used to create packages and firmware for the Omega2 devi
 
 ## Using the Docker Image
 
-The Docker image takes care of all environmental configuration and is the recommended method. For details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
+The Docker image takes care of all environmental configuration and is the recommended method. We recommend getting familiar with how Docker before trying this procedure.
+
+Procedure:
+
+1. Install Docker on your system: https://www.docker.com/get-started
+2. Pull our Docker image by running:
+```
+docker pull onion/omega2-source
+```
+3. Once the image has been pulled to your computer, you can run your own container based on the image: 
+```
+docker run -it onion/omega2-source /bin/bash
+```
+4. Your container will now be up and running, and you can compile the build system by running:
+```
+make
+```
+
+> **We recommend running Docker on a Linux system**. Some users have reported compilation issues when running Docker on Windows and Mac OS.
+
+For full details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
 
 ## Using a Linux System
 
 **Not recommended for beginners** 
 
-See the [Dockerfile](https://github.com/OnionIoT/source/blob/lede-17.01/Dockerfile) to get an idea of the system and environment requirements.
+Procedure to setup the build system on a Linux System (Ubuntu Distro):
 
-To correctly initialize the build system, run the following:
+1. Setup Linux environment by installing the required packages:
+```
+sudo apt-get update
+sudo apt-get install -y build-essential vim git wget curl subversion build-essential libncurses5-dev zlib1g-dev gawk flex quilt git-core unzip libssl-dev python-dev python-pip libxml-parser-perl default-jdk
+```
 
+2. Download the Build System from Github:
+```
+git clone https://github.com/OnionIoT/source.git
+cd source
+```
+
+3. Prepare build system:
 ```
 sh scripts/onion-feed-setup.sh
 git checkout .config
 ```
+> This will initialize & configure all the package feeds as well as setup the `.config` file to match this repo. With these commands, the firmware built will match the official firmware released by Onion.
 
-This will initialize & configure all the package feeds as well as setup the `.config` file to match this repo. With these commands, the firmware built will match the official firmware released by Onion.
+4. Compile Build System:
+```
+make -j
+```
 
+## Updating the Build System
+*Applies to both Docker and Linux System installations*
+
+Once you've setup your build system and have been using it, you'll want to update it from time to time.
+
+### Updating the Package Makefiles
+
+To grab the latest package makefiles for the [Onion Package Repo](https://github.com/OnionIoT/openwrt-packages), run this command:
+
+```
+./scripts/feeds update onion
+```
+
+> Run this command if you're seeing compilation issues errors in Onion packages, this will likely fix the problem. If not, let us know on the [Onion Community](http://community.onion.io/).
+
+### Grabbing the Latest Build System Code
+
+To grab the latest code from this repo, run:
+
+```
+git pull
+```
+
+If you've made modifications to which packages are built/included in the firmware, these changes will be reflected in your local `.config` file. 
+
+**Create a backup copy of your `.config` file before proceeding.** The `git pull` command will not work unless the `.config` file is restored to it's original state by running `git checkout .config` and running `git pull` again. **Note that this will REMOVE all of your customizations!** 
+
+
+## Errors When Compiling
+
+If you're encountering errors during compilation, you'll likely see something like the following:
+
+```
+make -r world: build failed. Please re-run make with -j1 V=s to see what's going on
+/root/source/include/toplevel.mk:198: recipe for target 'world' failed
+make: *** [world] Error 1
+```
+
+To get more visibility into the error, re-run your compilation as the error prompt suggests:
+
+```
+make -j1 V=s
+```
+
+The error messages will point you in the direction of the package responsible for the compilation error.
+* If the problematic package is from Onion, see the [Updating the Package Makefiles](#updating-the-build-system) section above.
+* If the problematic package is not related to Onion packages, it's likely due to issues on their end.
+
+> For Docker users, note that we recommend running Docker on a Linux System. Some users have reported compilation issues when running the build system in Docker on Windows and Mac OS, that are not observed on Docker on Linux.
 
 # LEDE Linux Distribution
 
