@@ -109,7 +109,7 @@ If you've made modifications to which packages are built/included in the firmwar
 **Create a backup copy of your `.config` file before proceeding.** The `git pull` command will not work unless the `.config` file is restored to it's original state by running `git checkout .config` and running `git pull` again. **Note that this will REMOVE all of your customizations!** 
 
 
-## Errors When Compiling
+## Troubleshooting
 
 If you're encountering errors during compilation, you'll likely see something like the following:
 
@@ -126,10 +126,10 @@ make -j1 V=s
 ```
 
 The error messages will point you in the direction of the package responsible for the compilation error.
-* If the problematic package is from Onion, see the [Updating the Package Makefiles](#updating-the-build-system) section above.
-* If the problematic package is not related to Onion packages, it's likely due to issues on their end.
+* If the problematic package is from Onion, see the [Updating the Package Makefiles](#updating-the-build-system) section above. This will likely resolve your issue.
+* If the problematic package is not related to Onion packages, it's likely due to environment issues or issues with the code. Please check with the original authors to get pointers for debugging.
 
-> For Docker users, note that we recommend running Docker on a Linux System. Some users have reported compilation issues when running the build system in Docker on Windows and Mac OS, that are not observed on Docker on Linux.
+> For Docker users, note that **we recommend running Docker on a Linux System**. Some users have reported compilation issues when running the build system in Docker on Windows and Mac OS, that are not observed on Docker on Linux.
 
 # LEDE Linux Distribution
 
