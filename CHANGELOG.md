@@ -170,6 +170,14 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b197
+*Oct 5, 2018*
+
+* OnionOS updates
+	* Addition of App Manager to install and remove OnionOS apps!
+	* Code editor no longer comes installed by default - space saving measure
+* mosquitto and mosquitto client now installed in base firmware
+
 #### b196
 *Sept 10, 2018*
 
@@ -202,6 +210,7 @@ Defining the changes in each build. *Note that if a number is missing, that buil
 
 * Added telnet and telnetd to busybox
 * Updated `python-adc-exp` package
+* Updated onion script to include setting of timezone
 
 #### b191
 *July 11, 2018*
