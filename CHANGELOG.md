@@ -24,6 +24,15 @@ The build number will continuously increment over the course of development.
 ### Versions
 Definining the differences in each version change
 
+#### 0.2.1
+**OnionOS Release**
+
+Next step forward for the Omega2
+
+* OnionOS is now part of the firwmare, it features:
+	* An App Manager
+	* A new and improved, built-in Setup Wizard 
+
 #### 0.2.0
 **WiFi Warp Core Release**
 
@@ -169,6 +178,19 @@ Initial firmware sent to be flashed at the factory
 
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
+
+#### b198
+*Oct 16, 2018*
+
+**Updating to version 0.2.1**
+
+* OnionOS 
+	* OnionOS is now included in firmware 
+	* Now includes a new and improved built-in Setup Wizard
+	* Created OnionOS App to install the Legacy Console and make it available as an OnionOS App
+	* Code Editor is no longer bundled with OnionOS - can be installed through App Manager
+	* uci defaults script to configure mosquitto for mqtt over websocket
+* Removed old setup wizard and base-www packages
 
 #### b197
 *Oct 5, 2018*
