@@ -179,6 +179,15 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b199
+*Oct 19, 2018*
+
+* OnionOS
+	* Updated App Manager to load available updates quicker and has ability to update OnionOS as well if required
+	* Setup Wizard styling updates
+* Added USB hotplug action to autorun a script
+* Added sftp server into firmware
+
 #### b198
 *Oct 16, 2018*
 
