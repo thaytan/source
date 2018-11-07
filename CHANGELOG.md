@@ -24,6 +24,11 @@ The build number will continuously increment over the course of development.
 ### Versions
 Definining the differences in each version change
 
+#### 0.2.2
+** Latest I2C Library**
+
+Latest version of the I2C library, no more device client
+
 #### 0.2.1
 **OnionOS Release**
 
@@ -178,6 +183,13 @@ Initial firmware sent to be flashed at the factory
 
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
+
+#### b200
+*Nov 7, 2018*
+
+* Latest version of Onion I2C library
+	* Now supports reading and writing multiple bytes to address with multiple bytes
+* Removed device client from firmware
 
 #### b199
 *Oct 19, 2018*
