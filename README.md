@@ -11,7 +11,7 @@ This buildsystem for the LEDE Linux distribution has been modified by Onion Corp
 * ~~Due to incompatibilities with recent kernel updates, building a firmware with the `Ralink APSoC WiFi SoftAP driver` **will cause a kernel panic during boot**~~
 	* ~~This can be fixed by reflashing the Omega's firmware using the Omega's Bootloader and Ethernet Expansion~~
 	* ~~We are working on a new implementation of the WiFi driver, stay tuned!~~
-	* Fixed with release of Onion WiFi Warp Core driver
+	* Fixed with release of Onion WiFi Warp Core driver in March 2018
 		* Available as an [OpenWRT/LEDE package](https://github.com/OnionIoT/OpenWRT-Packages/tree/master/wifi-warp-core) for systems running Linux Kernel 4.4.76
 		* **See [this post for more details on the Warp Core](https://onion.io/2bt-brand-new-os-release/)**
 
@@ -47,7 +47,7 @@ docker run -it onion/omega2-source /bin/bash
 make
 ```
 
-> **We recommend running Docker on a Linux system**. Some users have reported compilation issues when running Docker on Windows and Mac OS.
+> **We recommend running Docker on a Ubuntu Linux system**. Some users have reported compilation issues when running Docker on Windows and Mac OS.
 
 For more details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
 
@@ -55,7 +55,7 @@ For more details, see: https://onion.io/2bt-cross-compiling-c-programs-part-1/
 
 **Not recommended for beginners** 
 
-Procedure to setup the build system on a Linux System (Ubuntu Distro):
+Procedure to setup the build system on a Ubuntu Linux System:
 
 1. Setup Linux environment by installing the required packages:
 ```
