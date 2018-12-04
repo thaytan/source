@@ -184,8 +184,16 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b201
+*Dec 3, 2018*
+
+* Set higher priority for starting the mountd service
+	* External storage is now mounted before networking starts
+
 #### b200
 *Nov 7, 2018*
+
+**Updating to version 0.2.2**
 
 * Latest version of Onion I2C library
 	* Now supports reading and writing multiple bytes to address with multiple bytes
