@@ -189,6 +189,7 @@ Defining the changes in each build. *Note that if a number is missing, that buil
 
 * Set higher priority for starting the mountd service
 	* External storage is now mounted before networking starts
+* Updated OnionOS Code Editor app to come installed with default credentials and root / project already configured
 
 #### b200
 *Nov 7, 2018*
