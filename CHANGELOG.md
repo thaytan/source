@@ -184,6 +184,12 @@ Initial firmware sent to be flashed at the factory
 ### Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+#### b202
+*Feb 15, 2018*
+
+* Updated Onion-Script for correct Moscow timezone
+* `python-spidev` module now features a half-duplex xfer3 function
+
 #### b201
 *Dec 3, 2018*
 
